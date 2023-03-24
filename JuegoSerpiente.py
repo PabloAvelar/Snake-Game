@@ -32,7 +32,7 @@ def principal():
 	ycomida = random.randrange(11, 489)
 	#comida = pygame.Rect(xcomida, ycomida, 5,5)
 	manzana = pygame.sprite.Sprite()
-	manzanaImagen = pygame.image.load("manzana.PNG")
+	manzanaImagen = pygame.image.load("assets/img/manzana.PNG")
 	manzana.image = manzanaImagen
 	manzana.rect = manzanaImagen.get_rect()
 	manzana.rect.left = xcomida
@@ -41,11 +41,11 @@ def principal():
 
 	####Variables auxiliares#####
 	ha_chocado = False
-	fuente = pygame.font.Font("letrasjuego.ttf", 35)
+	fuente = pygame.font.Font("fuentes/letrasjuego.ttf", 35)
 	texto = fuente.render("Has perdido :(",2,[255,255,255])
 	pregunta = fuente.render("¿Quieres jugar de nuevo?",2,[255,255,255])
 	XD = fuente.render("XD", 2, [255,255,255])
-	fuenteOpcion = pygame.font.Font("letrasjuego.ttf", 25)
+	fuenteOpcion = pygame.font.Font("fuentes/letrasjuego.ttf", 25)
 	colorLetraJugar = [232, 232, 232]
 	colorLetraSalir = [232, 232, 232]
 	jugarDeNuevo = fuenteOpcion.render("JUGAR",2,colorLetraJugar)
@@ -61,8 +61,8 @@ def principal():
 	sobreMouse = False
 
 ####Sonidos#########
-	comer = pygame.mixer.Sound("comer.wav")
-	sonidoBoton = pygame.mixer.Sound("botones.wav")
+	comer = pygame.mixer.Sound("assets/sounds/comer.wav")
+	sonidoBoton = pygame.mixer.Sound("assets/sounds/botones.wav")
 
 	####Bucle principal#######
 	while salir != True:
@@ -172,7 +172,7 @@ def principal():
 
 def menu():
 	pygame.init()
-	icono = pygame.image.load("icono.ico")
+	icono = pygame.image.load("assets/img/icono.ico")
 	pygame.display.set_icon(icono)
 	pantalla = pygame.display.set_mode([480, 500])
 	pygame.display.set_caption("Serpiente")
@@ -184,16 +184,16 @@ def menu():
 	quitarJuego = pygame.Rect(180, 380, 150, 60)
 	colorIniciar = [39, 144, 13]
 	colorQuitar = [144, 13, 13]
-	fuenteMenu = pygame.font.Font("letrasjuego.ttf", 25)
+	fuenteMenu = pygame.font.Font("fuentes/letrasjuego.ttf", 25)
 	textoIniciar = fuenteMenu.render("JUGAR",2,[255,255,255])
 	textoQuitar = fuenteMenu.render("SALIR",2,[255,255,255])
-	fuenteMensaje = pygame.font.Font("letrasjuego.ttf", 17)
-	sonidoBoton = pygame.mixer.Sound("botones.wav")
+	fuenteMensaje = pygame.font.Font("fuentes/letrasjuego.ttf", 17)
+	sonidoBoton = pygame.mixer.Sound("assets/sounds/botones.wav")
 ####Etiquetas#####
 	presentacion = fuenteMensaje.render("Hola XD es mi segundo juego que hago usando python :D",2,[255,255,255])
 	miTwitter = fuenteMenu.render("Mi Twitter: @_PabloAvelar",2,[255,255,255])
 ####Mi logo XD######
-	logo = pygame.image.load("logo.JPG")
+	logo = pygame.image.load("assets/img/logo.JPG")
 ####Auxiliares menú#######
 	superficie = pygame.Rect(20, 20, 1,1)
 	cambiarColorIniciar = [51, 203, 13]
